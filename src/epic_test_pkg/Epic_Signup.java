@@ -86,15 +86,85 @@ public class Epic_Signup {
 		
 	}
 	
+	@Test(priority=7)
+	public void enterCountry(){
+		try 
+		{
+			//driver1.findElement(By.id("country")).sendKeys("India");
+			WebElement txtpwd=wait.until(ExpectedConditions.elementToBeClickable(By.id("country")));
+			txtpwd.sendKeys("India");
+			test1.log(LogStatus.PASS, "Country input present and enabled");
+			
+		} catch (Exception e) {
+			test1.log(LogStatus.FAIL, "Country input absent");
+		}
+		
+	}
+	
+	@Test(priority=7)
+	public void enterName(){
+		try 
+		{
+			//driver1.findElement(By.id("name")).sendKeys("Akansha");
+			WebElement txtpwd=wait.until(ExpectedConditions.elementToBeClickable(By.id("name")));
+			txtpwd.sendKeys("Akansha");
+			test1.log(LogStatus.PASS, "First-name input box present and enabled");
+			
+		} catch (Exception e) {
+			test1.log(LogStatus.FAIL, "First-name input box absent");
+		}
+		
+	}
+	
+	@Test(priority=7)
+	public void enterLastName(){
+		try 
+		{
+			//driver1.findElement(By.id("lastName")).sendKeys("Abcd");
+			WebElement txtpwd=wait.until(ExpectedConditions.elementToBeClickable(By.id("lastName")));
+			txtpwd.sendKeys("Abcd");
+			test1.log(LogStatus.PASS, "Last-name input box present and enabled");
+			
+		} catch (Exception e) {
+			test1.log(LogStatus.FAIL, "Last-name input box absent");
+		}
+		
+	}
+	
+	@Test(priority=7)
+	public void enterDisplayName(){
+		try 
+		{
+			//driver1.findElement(By.id("displayName")).sendKeys("Akansha123");
+			WebElement txtpwd=wait.until(ExpectedConditions.elementToBeClickable(By.id("displayName")));
+			txtpwd.sendKeys("Akansha123");
+			test1.log(LogStatus.PASS, "password input box present");
+			
+		} catch (Exception e) {
+			test1.log(LogStatus.FAIL, "password input box absent");
+		}
+		
+	}
+	
 	@Test(priority=8)
-	public void signin(){
+	public void checkTermsofService(){
+		try 
+		{
+			driver1.findElement(By.id("termsOfService")).click();
+			//wait.until(ExpectedConditions.elementToBeClickable(By.id("termsOfService"))).click();
+			test1.log(LogStatus.PASS, "terms of service checkbox present");
+			
+		} catch (Exception e) {
+			test1.log(LogStatus.FAIL, "terms of service checkbox absent");
+		}
+		
+	}
+	
+	@Test(priority=9)
+	public void signup(){
 		
 		try 
-		{	driver1.findElement(By.id("country")).sendKeys("India");
-			driver1.findElement(By.id("name")).sendKeys("Akansha");
-			driver1.findElement(By.id("lastName")).sendKeys("Akansha");
-			driver1.findElement(By.id("displayName")).sendKeys("Akansha123");
-			driver1.findElement(By.id("termsOfService")).click();
+		{		
 			wait.until(ExpectedConditions.elementToBeClickable(By.id("btn-submit"))).click();
 			test1.log(LogStatus.PASS, "Submit button present and enabled");
 			
