@@ -10,8 +10,11 @@
     <classes>
     <class name="epic_test_pkg.Init">
    	</class>
+   	<class name="epic_test_pkg.MultipleLogin"/>
+   	<!--  
    	<class name="epic_test_pkg.Epic_Login"/>
    	<class name="epic_test_pkg.Epic_Signup"/>
+   	-->
     </classes>
   </test>
 </suite> 

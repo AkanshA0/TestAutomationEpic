@@ -26,7 +26,7 @@ public class Epic_Signup {
 	@BeforeTest(groups="search")
 	public void launchBrowser(){
 		driver1=new ChromeDriver();
-		wait = new WebDriverWait(driver1, 10);
+		wait = new WebDriverWait(driver1, 20);
 		driver1.get(Init.baseUrl);
 	}
 	
@@ -101,7 +101,7 @@ public class Epic_Signup {
 		} catch (Exception e) {
 			test1.log(LogStatus.FAIL, "Submit button absent");
 		}
-		
+		test1.log(LogStatus.INFO, "Done with Signup test");
 	}
 	
 	@AfterTest

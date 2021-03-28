@@ -27,7 +27,7 @@ public class Epic_Login{
 	@BeforeTest(groups="search")
 	public void launchBrowser(){
 		driver=new ChromeDriver();
-		wait = new WebDriverWait(driver, 10);
+		wait = new WebDriverWait(driver, 20);
 		driver.get(Init.baseUrl);
 	}
 	
@@ -78,7 +78,7 @@ public class Epic_Login{
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "login with Epic option absent");
 		}
-		//Init.test.log(LogStatus.WARNING, "Moving to next step");
+		
 	}
 	
 	@Test(priority=2)
@@ -93,7 +93,7 @@ public class Epic_Login{
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "email input box absent");
 		}
-	//	Init.test.log(LogStatus.WARNING, "Moving to next step");
+
 		
 	}
 
@@ -108,7 +108,7 @@ public class Epic_Login{
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "password input box absent");
 		}
-	//	Init.test.log(LogStatus.WARNING, "Moving to next step");
+	
 		
 	}
 	
@@ -122,7 +122,7 @@ public class Epic_Login{
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "sign-in button absent");
 		}
-		//Init.test.log(LogStatus.WARNING, "Done with login test");
+		test.log(LogStatus.INFO, "Done with login test");
 		
 	}
 	
