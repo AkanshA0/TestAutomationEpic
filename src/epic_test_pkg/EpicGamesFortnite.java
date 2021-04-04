@@ -40,10 +40,10 @@ public class EpicGamesFortnite{
 	@BeforeMethod
 	public static void startReport1(Method result)
 	{
-		test = Init.report.startTest("EpicGamesReport - " + result.getName());
+		test = Init.report.startTest("Search Fortnite Report - " + result.getName());
 	}
 	
-	@Test(priority=1)
+	@Test(priority=0)
 	public void Searchinput(){
 		  
 		  test.log(LogStatus.INFO,"Sending data to be searched");
@@ -56,7 +56,7 @@ public class EpicGamesFortnite{
 			}
 	}
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public void search(){
 
 		test.log(LogStatus.INFO,"Clicking on Search");
@@ -70,13 +70,13 @@ public class EpicGamesFortnite{
 		}
 	}
 	
-	@Test(priority=3)
+	@Test(priority=2)
 	public void fortniteclick() throws InterruptedException{
-		Thread.sleep(5000);	
+		Thread.sleep(9000);	
 		try{
 		
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fortnite")));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#dieselReactWrapper > div > div.css-igz6h5-AppPage_bodyContainer > main > div > div > div.css-5wa3ri-Pagecontent-PagecontentAfterTopNav > div > div > section > div > div > div > section > div > section > section > ul > li > div > a > div > div > div.css-1euducm-DiscoverCardLayout_bodyAndBanner > div"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#dieselReactWrapper > div > div.css-igz6h5-AppPage__bodyContainer > main > div > div > div.css-5wa3ri-Page__content-Page__contentAfterTopNav > div > div > section > div > div > div > section > div > section > section > ul > li > div > a > div > div > div.css-1euducm-DiscoverCardLayout__bodyAndBanner > div"))).click();
 		test.log(LogStatus.INFO,"Clicking on fortnite");
 			test.log(LogStatus.PASS,"Fortnite is clickable");
 		}
@@ -85,7 +85,7 @@ public class EpicGamesFortnite{
 		}
 	}
 	
-	@Test(priority=4)
+	@Test(priority=3)
 	public void CPUrequirements() {
 		WebElement w=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div[4]/main/div/div[3]/div[2]/div/div[3]/div[7]/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[2]")));
 		System.out.println(w);
@@ -98,7 +98,7 @@ public class EpicGamesFortnite{
 		}
 	}
 	
-	@Test(priority=5)
+	@Test(priority=4)
 	public void MEMrequirements(){
 		boolean isMEMdisplayed = driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/main/div/div[3]/div[2]/div/div[3]/div[7]/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[4]/td[2]")).isDisplayed();
 		System.out.println(isMEMdisplayed);
@@ -110,7 +110,7 @@ public class EpicGamesFortnite{
 			test.log(LogStatus.FAIL,"Memory requirements are not available");
 		}
 	}
-	@Test(priority=6)
+	@Test(priority=5)
 	public void GPUrequirements(){
 		boolean isGPUdisplayed = driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/main/div/div[3]/div[2]/div/div[3]/div[7]/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[5]/td[2]")).isDisplayed();
 		System.out.println(isGPUdisplayed);

@@ -24,7 +24,7 @@ public class Epic_Login{
 	WebDriverWait wait;
 	static ExtentTest test;
 	
-	@BeforeTest()
+	@BeforeTest
 	public void launchBrowser(){
 		driver=new ChromeDriver();
 		wait = new WebDriverWait(driver, 20);
@@ -33,7 +33,7 @@ public class Epic_Login{
 	
 	@BeforeMethod
 	public static void startReport(Method result){
-		test = Init.report.startTest("Extent Report - "+result.getName());
+		test = Init.report.startTest("Login Report - "+result.getName());
 	}
 	
 	@AfterMethod
@@ -42,14 +42,8 @@ public class Epic_Login{
 		Init.report.flush();
 	}
 	
-	@Test(priority=0,groups="search")
+	@Test(priority=0)
 	public void titleVerify(){
-		/* SEARCH	
-		 WebElement txtemail=wait.until(ExpectedConditions.elementToBeClickable(By.id("searchInput")));
-		txtemail.sendKeys("fortnite");
-		driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/main/div/div[1]/div/nav/div/div[2]/div/div/div/div/div/form/button")).click();
-		*/
-		
 		  
 		test.log(LogStatus.INFO, "start login");
 		String expected="Epic Games Store | Download & Play PC Games, Mods, DLC & More – Epic Games";
@@ -63,7 +57,6 @@ public class Epic_Login{
 		{
 			test.log(LogStatus.FAIL, "Incorrect Title");
 		}
-	//	test.log(LogStatus.WARNING, "Moving to next step");
 		
 	}
 	

@@ -32,7 +32,7 @@ public class Epic_Signup {
 	
 	@BeforeMethod
 	public static void startReport(Method result){
-		test1 = Init.report.startTest("Extent Report - "+result.getName());
+		test1 = Init.report.startTest("Signup Report - "+result.getName());
 	}
 	
 	@AfterMethod
@@ -41,7 +41,7 @@ public class Epic_Signup {
 		Init.report.flush();
 	}
 
-	@Test(priority=5)
+	@Test(priority=0)
 	public void clickSignup(){
 		
 		try 
@@ -57,7 +57,7 @@ public class Epic_Signup {
 		}
 	}
 	
-	@Test(priority=6)
+	@Test(priority=1)
 	public void enterEmail(){
 		
 		try 
@@ -72,7 +72,7 @@ public class Epic_Signup {
 		
 	}
 
-	@Test(priority=7)
+	@Test(priority=2)
 	public void enterPassword(){
 		try 
 		{
@@ -86,7 +86,7 @@ public class Epic_Signup {
 		
 	}
 	
-	@Test(priority=7)
+	@Test(priority=3)
 	public void enterCountry(){
 		try 
 		{
@@ -101,7 +101,7 @@ public class Epic_Signup {
 		
 	}
 	
-	@Test(priority=7)
+	@Test(priority=4)
 	public void enterName(){
 		try 
 		{
@@ -116,7 +116,7 @@ public class Epic_Signup {
 		
 	}
 	
-	@Test(priority=7)
+	@Test(priority=5)
 	public void enterLastName(){
 		try 
 		{
@@ -131,7 +131,7 @@ public class Epic_Signup {
 		
 	}
 	
-	@Test(priority=7)
+	@Test(priority=6)
 	public void enterDisplayName(){
 		try 
 		{
@@ -146,7 +146,7 @@ public class Epic_Signup {
 		
 	}
 	
-	@Test(priority=8)
+	@Test(priority=7)
 	public void checkTermsofService(){
 		try 
 		{
@@ -160,7 +160,7 @@ public class Epic_Signup {
 		
 	}
 	
-	@Test(priority=9)
+	@Test(priority=8)
 	public void signup(){
 		
 		try 

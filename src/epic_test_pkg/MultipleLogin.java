@@ -33,7 +33,7 @@ public class MultipleLogin {
 
 	@BeforeMethod
 	public static void startReport(Method result){
-		test = Init.report.startTest("Extent Report - "+result.getName());
+		test = Init.report.startTest("Multiple Login Report - "+result.getName());
 	}
 	
 	@AfterMethod

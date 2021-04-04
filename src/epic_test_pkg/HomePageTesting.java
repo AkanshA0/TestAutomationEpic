@@ -33,10 +33,10 @@ public class HomePageTesting{
 	@BeforeMethod
 	public static void startReport1(Method result)
 	{
-		test = Init.report.startTest("EpicGamesReport - " + result.getName());
+		test = Init.report.startTest("Home Page Report - " + result.getName());
 	}
 	
-	@Test(priority=1)
+	@Test(priority=0)
 	public void SearchEpicLogo(){
 		  WebElement epiclogo =  driver.findElement(By.id("egLogo"));
 		  
@@ -49,7 +49,7 @@ public class HomePageTesting{
 			}
 	}
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public void Checkstore(){
 		  WebElement checkStore =  driver.findElement(By.id("sitenav-link-0"));
 		  
@@ -62,7 +62,7 @@ public class HomePageTesting{
 			}
 	}
 
-	@Test(priority=3)
+	@Test(priority=2)
 	public void CheckNews(){
 		  WebElement checkNEWS =  driver.findElement(By.id("sitenav-link-2"));
 		  
@@ -75,7 +75,7 @@ public class HomePageTesting{
 			}
 	}
 	
-	@Test(priority=4)
+	@Test(priority=3)
 	public void CheckFAQ(){
 		  WebElement checkFAQ =  driver.findElement(By.id("sitenav-link-2"));
 		  
@@ -88,7 +88,7 @@ public class HomePageTesting{
 			}
 	}
 
-	@Test(priority=5)
+	@Test(priority=4)
 	public void CheckHelp(){
 		  WebElement checkHelp =  driver.findElement(By.id("sitenav-link-3"));
 		  
@@ -101,7 +101,7 @@ public class HomePageTesting{
 			}
 	}
 	
-	@Test(priority=6)
+	@Test(priority=5)
 	public void CheckUnrealEngine(){
 		  WebElement checkUnrealEngine =  driver.findElement(By.id("sitenav-link-4"));
 		  

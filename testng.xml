@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite1" parallel="false">
-  <test name="Test1">
-     
-    <!--packages>
-    	<package name="epic_test_pkg"/> 
-    </packages-->
-   
+<suite name="EpicSuite1" parallel="false">
+ 
+  <test name="Home-Test">
     <classes>
     <class name="epic_test_pkg.Init"/>
-    
-  
-   
-   
-   	<class name="epic_test_pkg.Search1"/>
- 	<!-- 
-   	 	<class name="epic_test_pkg.Epic_Signup"/>
-   	
-   	<class name="epic_test_pkg.Epic_Login"/>
-   	<class name="epic_test_pkg.MultipleRegister"/> 
-   	<class name="epic_test_pkg.MultipleLogin"/>
-   	-->
-    </classes>
+ 	<class name="epic_test_pkg.HomePageTesting"/>
+ 	</classes>
   </test>
+  
+  <test name="Login-Register-Test">
+    <classes>
+    <class name="epic_test_pkg.Epic_Signup"/>
+   	<class name="epic_test_pkg.Epic_Login"/>
+  	</classes>
+  </test>
+  
+  <test name="Search-Test">
+    <classes>
+   	<class name="epic_test_pkg.EpicGamesFortnite"/>
+ 	</classes>
+  </test>
+  
+  <test name="Multiple-Register-Test">
+    <classes>
+   	<class name="epic_test_pkg.MultipleRegister"/> 
+ 	</classes>
+  </test>
+  
+  <test name="Multiple-Login-Test">
+    <classes>
+ 	<class name="epic_test_pkg.MultipleLogin"/>
+ 	</classes>
+  </test>
+ 
 </suite> 
