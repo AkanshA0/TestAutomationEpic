@@ -1,3 +1,5 @@
+package epic_test_pkg;
+
 import static org.testng.Assert.assertEquals;
 
 import java.lang.reflect.Method;
@@ -127,9 +129,9 @@ public class EpicGamesFortnite{
 		Init.report.flush();
 	}
 	
-//	@AfterTest
-//	public void destroySession(){
-//		driver.close();
-	//driver.quit();
-//	}
+	@AfterTest
+	public void destroySession(){
+		driver.close();
+		driver.quit();
+	}
 }

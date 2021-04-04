@@ -8,13 +8,17 @@
     </packages-->
    
     <classes>
-    <class name="epic_test_pkg.Init">
-   	</class>
-   	<class name="epic_test_pkg.MultipleRegister"/>
-   	<!--  
-   	<class name="epic_test_pkg.Epic_Signup"/>
+    <class name="epic_test_pkg.Init"/>
+    
+  
+   
+   
+   	<class name="epic_test_pkg.Search1"/>
+ 	<!-- 
+   	 	<class name="epic_test_pkg.Epic_Signup"/>
    	
    	<class name="epic_test_pkg.Epic_Login"/>
+   	<class name="epic_test_pkg.MultipleRegister"/> 
    	<class name="epic_test_pkg.MultipleLogin"/>
    	-->
     </classes>

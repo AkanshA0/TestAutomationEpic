@@ -24,7 +24,7 @@ public class Epic_Login{
 	WebDriverWait wait;
 	static ExtentTest test;
 	
-	@BeforeTest(groups="search")
+	@BeforeTest()
 	public void launchBrowser(){
 		driver=new ChromeDriver();
 		wait = new WebDriverWait(driver, 20);
@@ -45,11 +45,12 @@ public class Epic_Login{
 	@Test(priority=0,groups="search")
 	public void titleVerify(){
 		/* SEARCH	
-		 WebElement txtemail=Init.wait.until(ExpectedConditions.elementToBeClickable(By.id("searchInput")));
+		 WebElement txtemail=wait.until(ExpectedConditions.elementToBeClickable(By.id("searchInput")));
 		txtemail.sendKeys("fortnite");
-		Init.driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/main/div/div[1]/div/nav/div/div[2]/div/div/div/div/div/form/button")).click();;
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[4]/main/div/div[1]/div/nav/div/div[2]/div/div/div/div/div/form/button")).click();
+		*/
 		
-		  */
+		  
 		test.log(LogStatus.INFO, "start login");
 		String expected="Epic Games Store | Download & Play PC Games, Mods, DLC & More – Epic Games";
 		String actual=driver.getTitle();

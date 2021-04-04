@@ -41,7 +41,7 @@ public class MultipleRegister {
 	
 	
 	@Test(dataProvider="register-data-provider",dataProviderClass=DataProviderClass.class)
-	public void loginAmazon(String username, String pwd,String country,String fname,String lname,String dname){
+	public void registerAmazon(String username, String pwd,String country,String fname,String lname,String dname){
 	
 		try{
 		driver.get(Init.baseUrl);
